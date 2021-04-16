@@ -1,0 +1,21 @@
+GET http://localhost:4006
+
+### login route
+POST  http://localhost:4006/auth/login
+
+### register route
+POST  http://localhost:4006/auth/register
+Content-Type: application/json
+
+{
+    "email":"kalantremahesh33@gmail.com",
+    "password":"123456"
+    
+}
+
+### refresh-token route
+POST  http://localhost:4006/auth/refresh-token
+
+
+### logout route
+DELETE   http://localhost:4006/auth/logout
