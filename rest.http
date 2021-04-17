@@ -1,21 +1,36 @@
 GET http://localhost:4006
-
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTg2MzY1MTQsImV4cCI6MTYxODYzNjUzNCwiYXVkIjoiNjA3OWRkYTFmZTBiYjA0MmZhN2Y5NjI0IiwiaXNzIjoidGVzdHRlc3QuY29tIn0.dtqpbTG_3puMrunuC63GfsHlQh9bWI9mD5iryERqSWA
 ### login route
 POST  http://localhost:4006/auth/login
+Content-Type: application/json
+
+{
+    "email":"kalantremahesh38@gmail.com",
+    "password":"123456"  
+}
 
 ### register route
 POST  http://localhost:4006/auth/register
 Content-Type: application/json
 
 {
-    "email":"kalantremahesh33@gmail.com",
-    "password":"123456"
-    
+    "email":"kalantremahesh41@gmail.com",
+    "password":"1234567"  
 }
 
 ### refresh-token route
 POST  http://localhost:4006/auth/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTg2NDI2NDksImV4cCI6MTYxODY0MjY3OSwiYXVkIjoiNjA3OWRkYTFmZTBiYjA0MmZhN2Y5NjI0IiwiaXNzIjoidGVzdHRlc3QuY29tIn0.XZ4_i20wLw30U1ESmPJ3wYJvxDVZKCYPztMVgfV27_"  
+}
 
 
 ### logout route
 DELETE   http://localhost:4006/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTg2NDI2NDksImV4cCI6MTYxODY0MjY3OSwiYXVkIjoiNjA3OWRkYTFmZTBiYjA0MmZhN2Y5NjI0IiwiaXNzIjoidGVzdHRlc3QuY29tIn0.XZ4_i20wLw30U1ESmPJ3wYJvxDVZKCYPztMVgfV27_"  
+}

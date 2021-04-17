@@ -4,13 +4,17 @@ const createError = require('http-errors');
 require('dotenv').config();
 require('./helpers/init_mongodb')
 const AuthRoute = require('./Routes/Auth.route')
+const { verifyAccessToken } = require('./helpers/jwt_helper')
+require('./helpers/inti_redis')
+
 
 
 const app = express();
 app.use(morgan('dev'))
 app.use(express.json())
 
-app.get('/',async(req,res,next)=>{
+app.get('/',verifyAccessToken, async(req,res,next)=>{
+    console.log(req.headers['authorization']);
     res.send("Hello from express");
 
 })
